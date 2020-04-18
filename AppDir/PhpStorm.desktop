@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=PhpStorm
+Comment=The Lightning-Smart PHP IDE 
+Exec=AppRun %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=icon
+Categories=Development;Office;
+StartupWMClass=PhpStorm
+StartupNotify=true
