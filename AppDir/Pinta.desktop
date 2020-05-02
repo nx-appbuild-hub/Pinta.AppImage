@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Pinta
+Comment=Pinta is a free, open source program for drawing and image editing.
+Exec=AppRun %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=pinta
+Categories=Graphics;
+StartupWMClass=pinta
+StartupNotify=true

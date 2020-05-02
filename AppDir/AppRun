@@ -1,4 +1,11 @@
 #! /bin/bash
 set -e
+
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/${APPDIR}/lib
+export LD_LIBRARY_PATH
+
 cd ${HOME}
-exec ${APPDIR}/opt/application/bin/phpstorm.sh $@
+
+
+exec ${APPDIR}/bin/pinta $@

@@ -13,10 +13,10 @@ all:
 	mkdir --parents AppDir/opt/application
 	cp -r pinta-1.6/* AppDir/opt/application
 
-	#chmod +x AppDir/AppRun
-	#export ARCH=x86_64; appimagetool AppDir $(OUTPUT)
+	chmod +x AppDir/AppRun
+	export ARCH=x86_64; bin/appimagetool.AppImage AppDir $(OUTPUT)
 
-	#chmod +x $(OUTPUT)
+	chmod +x $(OUTPUT)
 
 	#rm -rf pinta-1.6
 	#rm -f $(DESTINATION)
