@@ -5,7 +5,9 @@ set -e
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/${APPDIR}/lib:/${APPDIR}/lib64
 export LD_LIBRARY_PATH
 
-cd ${HOME}
 
+exec ${APPDIR}/bin/mono ${APPDIR}/lib/pinta/Pinta.exe "$@"
+
+cd ${HOME}
 
 exec ${APPDIR}/bin/pinta $@
