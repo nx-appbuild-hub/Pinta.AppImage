@@ -18,4 +18,4 @@ export LD_LIBRARY_PATH
 
 cd ${HOME}
 
-exec ${APPDIR}/usr/bin/mono-sgen ${APPDIR}/lib/pinta/Pinta.exe "$@"
+exec ${APPDIR}/usr/bin/mono-sgen --config ${APPDIR}/etc/mono/config ${APPDIR}/lib/pinta/Pinta.exe "$@"
