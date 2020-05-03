@@ -2,12 +2,9 @@
 set -e
 
 
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/${APPDIR}/lib:/${APPDIR}/lib64
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${APPDIR}/lib:${APPDIR}/lib64:${APPDIR}/usr/lib:${APPDIR}/user/lib64
 export LD_LIBRARY_PATH
-
-
-exec ${APPDIR}/bin/mono ${APPDIR}/lib/pinta/Pinta.exe "$@"
 
 cd ${HOME}
 
-exec ${APPDIR}/bin/pinta $@
+exec ${APPDIR}/usr/bin/mono-sgen ${APPDIR}/lib/pinta/Pinta.exe "$@"
