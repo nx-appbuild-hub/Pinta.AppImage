@@ -21,9 +21,6 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${APPDIR}/usr/lib/gtk-sharp-2.0
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${APPDIR}/usr/lib/mono/gtk-sharp-2.0
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${APPDIR}/usr/lib/mono
 
-
 export LD_LIBRARY_PATH
 
-cd ${HOME}
-
-exec ${APPDIR}/usr/bin/mono-sgen --config ${APPDIR}/etc/mono/config ${APPDIR}/lib/pinta/Pinta.exe "$@"
+exec ${APPDIR}/bin/mono-sgen --config ${APPDIR}/etc/mono/config ${APPDIR}/lib/pinta/Pinta.exe "$@"
