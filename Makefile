@@ -5,7 +5,7 @@ all: clean
 
 	mkdir -p ./mono
 
-	wget --output-document=./mono/build.rpm https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/m/mono-core-4.6.2-4.el7.x86_64.rpm
+	wget --output-document=./mono/build.rpm https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/m/mono-core-6.8.0-1.el7.x86_64.rpm
 	cd ./mono && rpm2cpio build.rpm | cpio -idmv && cd ..
 
 	wget --output-document=./mono/build.rpm https://rpmfind.net/linux/epel/7/x86_64/Packages/g/gtk-sharp2-2.12.26-4.el7.x86_64.rpm
@@ -21,12 +21,12 @@ all: clean
 	mkdir -p Pinta/build
 
 	cd ./Pinta && ./autogen.sh --prefix=`pwd`/build && cd ..
-	cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' Makefile && cd ..
-	cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' Makefile.am && cd ..
-	cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' Makefile.in && cd ..
-	cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' help/Makefile && cd ..
-	cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' help/Makefile.am && cd ..
-	cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' help/Makefile.in && cd ..
+	# cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' Makefile && cd ..
+	# cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' Makefile.am && cd ..
+	# cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' Makefile.in && cd ..
+	# cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' help/Makefile && cd ..
+	# cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' help/Makefile.am && cd ..
+	# cd ./Pinta && sed -i 's/@YELP_HELP_RULES@//g' help/Makefile.in && cd ..
 
 	cd ./Pinta && make -i -B && make install && cd ..
 
