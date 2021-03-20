@@ -14,7 +14,7 @@ PWD:=$(shell pwd)
 all:
 
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir/pinta
-	$(PWD)/apprepo.AppImage --destination=$(PWD)/build appdir boilerplate libatk1.0-0 libatk-bridge2.0-0 libgtk-3-0 libatspi2.0-0 libglib2.0-0 \
+	apprepo --destination=$(PWD)/build appdir boilerplate libatk1.0-0 libatk-bridge2.0-0 libgtk-3-0 libatspi2.0-0 libglib2.0-0 \
 												mono-complete libatspi2.0-0 librsvg2-2 libgtk2.0-cil mono-devel
 
 	echo ''																													>> $(PWD)/build/Boilerplate.AppDir/AppRun
