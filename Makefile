@@ -23,7 +23,7 @@ all: clean
 	wget --output-document=$(PWD)/build/mono/build.rpm https://rpmfind.net/linux/epel/7/x86_64/Packages/g/gtk-sharp2-2.12.26-4.el7.x86_64.rpm
 	cd $(PWD)/build/mono && rpm2cpio build.rpm | cpio -idmv && cd ..
 
-	wget --output-document=$(PWD)/build/mono/build.rpm http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/gtk2-2.24.32-4.el8.x86_64.rpm
+	wget --output-document=$(PWD)/build/mono/build.rpm http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/gtk2-2.24.32-5.el8.x86_64.rpm
 	cd $(PWD)/build/mono && rpm2cpio build.rpm | cpio -idmv && cd ..
 
 	wget --output-document=$(PWD)/build/mono/build.rpm http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/gtk3-3.22.30-6.el8.x86_64.rpm
