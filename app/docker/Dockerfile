@@ -19,24 +19,23 @@ RUN apt-get install -y kmod make gcc wget
 RUN apt-get install -y file curl wget unzip tar
 RUN apt-get install -y fuse
 
-RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-RUN dpkg -i packages-microsoft-prod.deb
-RUN rm packages-microsoft-prod.deb
+# RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+# RUN dpkg -i packages-microsoft-prod.deb
+# RUN rm packages-microsoft-prod.deb
 
-RUN apt-get update  -y 
-RUN apt-get install -y autotools-dev autoconf-archive gettext intltool libgtk-3-dev
+# RUN apt-get update  -y 
+# RUN apt-get install -y autotools-dev autoconf-archive gettext intltool libgtk-3-dev
 
-RUN apt-get install -y apt-transport-https
-RUN apt-get install -y dotnet-sdk-6.0
+# RUN apt-get install -y apt-transport-https
+# RUN apt-get install -y dotnet-sdk-6.0
 
 
 # RUN apt-get build-dep pinta
 # RUN apt-get install git
 
-# RUN git clone https://github.com/PintaProject/Pinta.git pinta
-# RUN cd pinta && ./autogen.sh --prefix=~/build
-# RUN make
-# RUN make install
+# RUN git clone https://github.com/PintaProject/Pinta.git ~/pinta
+# RUN cd ~/pinta && ./autogen.sh --prefix=~/pinta/build
+# RUN cd ~/pinta && make && make install
 
 
 
