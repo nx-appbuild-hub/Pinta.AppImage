@@ -17,11 +17,9 @@ all: clean init
 
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir/pinta
 	$(PWD)/bin/Apprepo.AppImage --destination=$(PWD)/build appdir boilerplate \
-	    libgdk-pixbuf2.0-0 libatk1.0-0 libatk-bridge2.0-0 libgtk2.0-0 \
-	    libreadline8 at-spi2-core libpango-1.0-0 libselinux1 \
-		libgtk-3-0
+	    libreadline8 libselinux1 libwayland-cursor0 libgtk-3-0		
 
-	wget --output-document=${PWD}/build/build.zip  https://github.com/PintaProject/Pinta/releases/download/dev-preview-builds/Pinta-2.0-dev573-ubuntu-20.04.zip
+	wget --output-document=${PWD}/build/build.zip  https://github.com/PintaProject/Pinta/releases/download/dev-preview-builds/Pinta-2.1-dev695-ubuntu-20.04.zip
 	unzip ${PWD}/build/build.zip -d $(PWD)/build/Boilerplate.AppDir/pinta
 
 	echo ''                                                           >> $(PWD)/build/Boilerplate.AppDir/AppRun
